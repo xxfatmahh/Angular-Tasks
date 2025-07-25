@@ -1,0 +1,23 @@
+.custom-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1e2a38;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  font-family: Arial, sans-serif;
+  z-index: 1000;
+  border-radius: 10px;
+}
+
+.custom-footer.fixed-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 1160px;
+  z-index: 1000;
+
+}

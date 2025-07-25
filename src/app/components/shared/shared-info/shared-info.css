@@ -1,0 +1,153 @@
+/* Pre-Footer Section */
+.pre-footer-section {
+  background-color: #2c3e50;
+  color: white;
+  padding: 80px 0;
+  position: relative;
+  z-index: 10;
+}
+
+.pre-footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.pre-footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 60px;
+  text-align: center;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: white;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.footer-info {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #ecf0f1;
+  font-weight: 300;
+}
+
+.footer-info p {
+  margin: 5px 0;
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: transparent;
+  border: 3px solid white;
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.social-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
+}
+
+.social-link:hover::before {
+  transform: scale(1);
+}
+
+.social-icon {
+  font-size: 1.5rem;
+  position: relative;
+  z-index: 2;
+  transition: color 0.3s ease;
+}
+
+.social-link:hover .social-icon {
+  color: #2c3e50;
+}
+
+.social-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .pre-footer-section {
+    padding: 60px 0;
+  }
+
+  .pre-footer-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .footer-title {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+  }
+
+  .footer-info {
+    font-size: 1rem;
+  }
+
+  .social-link {
+    width: 50px;
+    height: 50px;
+  }
+
+  .social-icon {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .pre-footer-section {
+    padding: 40px 0;
+  }
+
+  .pre-footer-content {
+    gap: 30px;
+  }
+
+  .pre-footer-container {
+    padding: 0 15px;
+  }
+
+  .social-links {
+    gap: 15px;
+  }
+}

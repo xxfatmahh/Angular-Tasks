@@ -1,0 +1,13 @@
+.section-header {
+  padding: 20px 0;
+}
+
+.line {
+  width: 80px;
+  height: 4px;
+}
+
+.star {
+  font-size: 2rem;
+  line-height: 1;
+}
